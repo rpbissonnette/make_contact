@@ -234,8 +234,8 @@ class MCWindow(QMainWindow):
             var = "Archives"
             self.options['archives'] = self.ui.dirsArchivesB.isChecked()
 
-        except Exception, e:
-            print "Caught %s setting %s, please correct" % (e, var)
+        except Exception as e:
+            print("Caught %s setting %s, please correct" % (e, var))
 
 
     def enableCoverE(self):
@@ -278,7 +278,7 @@ class MCWindow(QMainWindow):
 
 
     def dropDirs(self, event):
-        print "dropDirs:",event
+        print("dropDirs:",event)
 
 
     def addDirs(self):
@@ -347,7 +347,7 @@ class MCWindow(QMainWindow):
 
         start = time.time()
         
-        for i in xrange(self.ui.dirsL.count()):
+        for i in range(self.ui.dirsL.count()):
             d = self.ui.dirsL.item(i)
             ## print i,d.text(), self.options
 
@@ -356,10 +356,10 @@ class MCWindow(QMainWindow):
 
             try:
                 make_contact.processFolder(self.options, d.text(), progress=self.progress)
-            except make_contact.AbortException,e:
+            except make_contact.AbortException as e:
                 break
-            except Exception,e:
-                print traceback.format_exc()
+            except Exception as e:
+                print(traceback.format_exc())
                 break
 
         end = time.time()

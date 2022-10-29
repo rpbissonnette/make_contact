@@ -4,5 +4,6 @@ test
 outs
 .idea
 *.pyc
+*.bak
 make_contact-gui.py
 

@@ -17,7 +17,7 @@ class SevenZFile(object):
             archive = py7zlib.Archive7z(fp)
             n = len(archive.getnames())
             is7z = True
-        except Exception, e:
+        except Exception as e:
             pass
         finally:
             if fp: fp.close()
