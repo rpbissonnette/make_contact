@@ -1,0 +1,3 @@
+{
+    "files": ["make_contact.py", "make_contact_gui.py", "mc_main.ui", "progressdialog.ui"]
+}

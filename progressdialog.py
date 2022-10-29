@@ -1,70 +1,104 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'progressdialog.ui'
-#
-# Created: Mon Mar 26 13:09:11 2018
-#      by: pyside-uic 0.2.13 running on PySide 1.2.2
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'progressdialog.ui'
+##
+## Created by: Qt User Interface Compiler version 6.4.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PySide import QtCore, QtGui
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QDialog, QGridLayout, QLabel,
+    QProgressBar, QPushButton, QSizePolicy, QTextEdit,
+    QWidget)
 
 class Ui_ProgressDialog(object):
     def setupUi(self, ProgressDialog):
-        ProgressDialog.setObjectName("ProgressDialog")
+        if not ProgressDialog.objectName():
+            ProgressDialog.setObjectName(u"ProgressDialog")
         ProgressDialog.resize(693, 350)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Minimum)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(ProgressDialog.sizePolicy().hasHeightForWidth())
         ProgressDialog.setSizePolicy(sizePolicy)
-        self.gridLayout = QtGui.QGridLayout(ProgressDialog)
-        self.gridLayout.setObjectName("gridLayout")
-        self.label_3 = QtGui.QLabel(ProgressDialog)
-        self.label_3.setObjectName("label_3")
+        self.gridLayout = QGridLayout(ProgressDialog)
+        self.gridLayout.setSpacing(6)
+        self.gridLayout.setContentsMargins(11, 11, 11, 11)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.label_3 = QLabel(ProgressDialog)
+        self.label_3.setObjectName(u"label_3")
+
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
-        self.label = QtGui.QLabel(ProgressDialog)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
+
+        self.label = QLabel(ProgressDialog)
+        self.label.setObjectName(u"label")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy1)
+        self.label.setAlignment(Qt.AlignCenter)
+
         self.gridLayout.addWidget(self.label, 0, 1, 1, 1)
-        self.label_4 = QtGui.QLabel(ProgressDialog)
-        self.label_4.setObjectName("label_4")
+
+        self.label_4 = QLabel(ProgressDialog)
+        self.label_4.setObjectName(u"label_4")
+
         self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
-        self.composeBar = QtGui.QProgressBar(ProgressDialog)
-        self.composeBar.setProperty("value", 24)
-        self.composeBar.setObjectName("composeBar")
+
+        self.composeBar = QProgressBar(ProgressDialog)
+        self.composeBar.setObjectName(u"composeBar")
+        self.composeBar.setValue(24)
+
         self.gridLayout.addWidget(self.composeBar, 3, 1, 1, 1)
-        self.abortB = QtGui.QPushButton(ProgressDialog)
-        self.abortB.setObjectName("abortB")
+
+        self.abortB = QPushButton(ProgressDialog)
+        self.abortB.setObjectName(u"abortB")
+
         self.gridLayout.addWidget(self.abortB, 5, 0, 1, 2)
-        self.dirsBar = QtGui.QProgressBar(ProgressDialog)
-        self.dirsBar.setProperty("value", 24)
-        self.dirsBar.setObjectName("dirsBar")
+
+        self.dirsBar = QProgressBar(ProgressDialog)
+        self.dirsBar.setObjectName(u"dirsBar")
+        self.dirsBar.setValue(24)
+
         self.gridLayout.addWidget(self.dirsBar, 1, 1, 1, 1)
-        self.layoutBar = QtGui.QProgressBar(ProgressDialog)
-        self.layoutBar.setProperty("value", 24)
-        self.layoutBar.setObjectName("layoutBar")
+
+        self.layoutBar = QProgressBar(ProgressDialog)
+        self.layoutBar.setObjectName(u"layoutBar")
+        self.layoutBar.setValue(24)
+
         self.gridLayout.addWidget(self.layoutBar, 2, 1, 1, 1)
-        self.label_2 = QtGui.QLabel(ProgressDialog)
-        self.label_2.setObjectName("label_2")
+
+        self.label_2 = QLabel(ProgressDialog)
+        self.label_2.setObjectName(u"label_2")
+
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-        self.logT = QtGui.QTextEdit(ProgressDialog)
-        self.logT.setObjectName("logT")
+
+        self.logT = QTextEdit(ProgressDialog)
+        self.logT.setObjectName(u"logT")
+
         self.gridLayout.addWidget(self.logT, 4, 0, 1, 2)
 
+
         self.retranslateUi(ProgressDialog)
-        QtCore.QMetaObject.connectSlotsByName(ProgressDialog)
+
+        QMetaObject.connectSlotsByName(ProgressDialog)
+    # setupUi
 
     def retranslateUi(self, ProgressDialog):
-        ProgressDialog.setWindowTitle(QtGui.QApplication.translate("ProgressDialog", "Make Contact Sheet Progress", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("ProgressDialog", "Layout", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("ProgressDialog", "Contact Sheet Progress...", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("ProgressDialog", "Compose", None, QtGui.QApplication.UnicodeUTF8))
-        self.abortB.setText(QtGui.QApplication.translate("ProgressDialog", "Abort", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("ProgressDialog", "Directories:", None, QtGui.QApplication.UnicodeUTF8))
+        ProgressDialog.setWindowTitle(QCoreApplication.translate("ProgressDialog", u"Make Contact Sheet Progress", None))
+        self.label_3.setText(QCoreApplication.translate("ProgressDialog", u"Layout", None))
+        self.label.setText(QCoreApplication.translate("ProgressDialog", u"Contact Sheet Progress...", None))
+        self.label_4.setText(QCoreApplication.translate("ProgressDialog", u"Compose", None))
+        self.abortB.setText(QCoreApplication.translate("ProgressDialog", u"Abort", None))
+        self.label_2.setText(QCoreApplication.translate("ProgressDialog", u"Directories:", None))
+    # retranslateUi
 

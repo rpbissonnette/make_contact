@@ -8,5 +8,5 @@ default: $(PYS)
 
 %.py: %.ui
 	#/cygdrive/c/Python27/Scripts/pyside-uic $^ > $@
-	pyside-uic $^ > $@
+	pyside6-uic $^ > $@
 
