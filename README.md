@@ -1,3 +1,9 @@
+#  What I am doing here...
+
+Make_contact looks like it can do what I need, but it is old and made for Windows.
+This branch attempts to bring it up to date for Python 3 and PySide6, and only 
+testing on a Linux system.
+
 # make_contact
 
 This was found on the web at http://pastebin.com/UYzmT5X9, and assumed to be
