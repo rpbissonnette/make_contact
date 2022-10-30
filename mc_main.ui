@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>657</width>
-    <height>736</height>
+    <width>659</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1205,7 +1205,7 @@
           <string>File type/extension to use for sheet</string>
          </property>
          <property name="inputMask">
-          <string>999; </string>
+          <string>999</string>
          </property>
          <property name="text">
           <string>24</string>
@@ -1381,7 +1381,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="2" colspan="1">
+       <item row="1" column="2">
         <widget class="QPushButton" name="dirsClearB">
          <property name="text">
           <string>Clear</string>
@@ -1437,7 +1437,7 @@
           <bool>false</bool>
          </property>
          <property name="inputMask">
-          <string>999; </string>
+          <string>999</string>
          </property>
          <property name="text">
           <string>8</string>
@@ -1886,8 +1886,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>657</width>
-     <height>23</height>
+     <width>659</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1906,15 +1906,24 @@
    <property name="text">
     <string>Quit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
   </action>
   <action name="actionSave_Config">
    <property name="text">
     <string>Save Config</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionLoad_Config">
    <property name="text">
     <string>Load Config</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
    </property>
   </action>
  </widget>
@@ -1927,22 +1936,5 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections>
-  <connection>
-   <sender>actionQuit</sender>
-   <signal>activated()</signal>
-   <receiver>mc_main</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>308</x>
-     <y>471</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
