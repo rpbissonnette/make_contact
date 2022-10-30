@@ -5,9 +5,8 @@
 # This is copy-n-pasted from another system, so apologies for it being a little messy...
 
 
-import os, sys, glob, re, math, random, fnmatch, copy, json, time
+import io, os, sys, glob, re, math, random, fnmatch, copy, json, time
 import zipfile, rarfile, sevenzfile
-from io import StringIO
 from PIL import Image, ImageDraw, ImageFont
 import argparse
 
@@ -292,7 +291,7 @@ def layoutImages(width, height, imgs, thimgsize = 150, forceFullSize = True, cro
             if not isinstance(imgs[i], Image.Image):
                 try:
                     if archive is None:
-                        im = Image.open(StringIO(archive.read(imgs[i])))
+                        im = Image.open(io.BytesIO(archive.read(imgs[i])))
                     else:
                         im = Image.open(imgs[i])
 
@@ -459,7 +458,7 @@ def layoutImages(width, height, imgs, thimgsize = 150, forceFullSize = True, cro
                         imgs[curimg] = Image.open(imgs[curimg])
                     else:
                         ifn = imgs[curimg]
-                        imgs[curimg] = Image.open(StringIO(archive.read(imgs[curimg])))
+                        imgs[curimg] = Image.open(io.BytesIO(archive.read(imgs[curimg])))
                         imgs[curimg].filename = ifn
 
                     if thumbminsize > 0:
@@ -481,7 +480,7 @@ def layoutImages(width, height, imgs, thimgsize = 150, forceFullSize = True, cro
                         imgs[curimg].load()
 
                     break
-                except Exception:
+                except Exception as e:
                     del imgs[curimg]
                     nimgs -= 1
 
@@ -775,7 +774,7 @@ def createContactSheet(options, folder, progress = None):
 
         # Load and scale cover image
         if not archive is None:
-            cover = Image.open(StringIO(archive.read(covername)))
+            cover = Image.open(io.BytesIO(archive.read(covername)))
             cover.filename = covername
         else:
             cover = Image.open(covername)
