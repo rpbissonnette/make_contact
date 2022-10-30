@@ -1,8 +1,9 @@
 
 # Helper widget to manage directory list
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 class DirsList(QListWidget):
 

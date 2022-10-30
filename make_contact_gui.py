@@ -5,8 +5,9 @@ import json
 import traceback
 import time
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 from PIL import ImageColor
 
@@ -57,6 +58,7 @@ class MCWindow(QMainWindow):
 
         self.ui.actionLoad_Config.triggered.connect(self.loadConfig)
         self.ui.actionSave_Config.triggered.connect(self.saveConfig)
+        self.ui.actionQuit.triggered.connect(self.quit)
 
         self.setFromOptions(self.options)
         
@@ -285,7 +287,7 @@ class MCWindow(QMainWindow):
         dia = QFileDialog()
         dia.setViewMode(QFileDialog.List)
         if not self.ui.dirsArchivesB.isChecked():
-            dia.setFileMode(QFileDialog.DirectoryOnly)
+            dia.setFileMode(QFileDialog.Directory)
             dia.setOption(QFileDialog.ShowDirsOnly, True)
         else:
             dia.setFileMode(QFileDialog.ExistingFiles)
